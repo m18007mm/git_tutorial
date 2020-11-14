@@ -12,7 +12,7 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.grey.shade100,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -32,13 +32,13 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
 
-  void checkAnswer(bool userPickAnswer) {
+  void checkAnswer(bool userPickAnswer){
     bool correctAnswer = quizList.getCorrectAnswer();
 
-    if (userPickAnswer == correctAnswer) {
-      scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-    } else {
-      scoreKeeper.add(Icon(Icons.close, color: Colors.red));
+    if(userPickAnswer == correctAnswer){
+      scoreKeeper.add(Icon(Icons.check,color:Colors.green));
+    }else{
+      scoreKeeper.add(Icon(Icons.close,color:Colors.red));
     }
     setState(() {
       quizList.nextQuestion();
@@ -52,20 +52,20 @@ class _QuizPageState extends State<QuizPage> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Expanded(
-          flex: 5,
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Center(
-              child: Text(
-                quizList.getQuestionText(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.white,
+            flex: 5,
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                  quizList.getQuestionText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
-          ),
         ),
         Expanded(
           child: Padding(
@@ -77,9 +77,7 @@ class _QuizPageState extends State<QuizPage> {
                     fontSize: 20.0,
                     color: Colors.white,
                   )),
-              onPressed: () {
-                checkAnswer(true);
-              },
+              onPressed: () {checkAnswer(true);},
             ),
           ),
         ),
@@ -88,16 +86,12 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
               color: Colors.lightBlue,
-              child: Text(
-                'false',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                ),
-              ),
-              onPressed: () {
-                checkAnswer(false);
-              },
+              child: Text('false',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),),
+              onPressed: (){checkAnswer(false);},
             ),
           ),
         ),
