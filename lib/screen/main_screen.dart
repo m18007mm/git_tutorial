@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'formula_screen.dart';
 
 void main() {
-  runApp(Quizzler());
+  runApp(Formula_screen());
 }
 
 class Quizzler extends StatelessWidget {
