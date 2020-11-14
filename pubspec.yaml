@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_plot: ^0.0.4
+
 
 
   cupertino_icons: ^1.0.0
