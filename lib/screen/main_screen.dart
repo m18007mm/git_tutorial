@@ -28,16 +28,7 @@ class _MyAppState extends State<math_app> {
             key: _scaffoldKey,
             appBar: AppBar(
               title: const Text('はたらくかんすう'),
-              actions: [
-                IconButton(
-                  icon: Icon(Icons.undo),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: Icon(Icons.redo),
-                  onPressed: () {},
-                )
-              ],
+              centerTitle: true,
             ),
             endDrawer: Drawer(
               child: ListView(
@@ -71,7 +62,6 @@ class _MyAppState extends State<math_app> {
                       Navigator.pop(context);
                     },
                   ),
-
                   ListTile(
                     title: Text('weather'),
                     onTap: () {
@@ -81,36 +71,54 @@ class _MyAppState extends State<math_app> {
                   ListTile(
                     title: Text('setting'),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return Setting();
-                        },
-                      ),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Setting();
+                          },
+                        ),
                       );
                     },
                   ),
                 ],
               ),
             ),
-
-            body: _buildStyleList(context),
-            bottomNavigationBar: _buildSettings(context),
+            body: GridView.count(
+              crossAxisCount: 2,
+               crossAxisSpacing: 8.0,
+               mainAxisSpacing: 8.0,
+               padding: EdgeInsets.only(top: 8.0,right: 8.0,left: 8.0),
+               children: List.generate(5, (index) {
+                  return Container(
+                    padding: const EdgeInsets.all(5.0),
+                    alignment: Alignment.center,
+                    decoration:BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      color:_primarySwatch,
+                    ),
+                    child: GridTile(
+                      child: FlatButton(
+                        padding: EdgeInsets.all(25.0),
+                        onPressed: (){
+                          
+                        },
+                      ),
+                      footer:Center(
+                        child: Text(
+                          '$index 二次関数'
+                        ),
+                      ),
+                    ),
+                  );
+                }),),
+            bottomNavigationBar: _buildSettings(context)
           );
         },
       ),
     );
   }
 
-
-
-  Widget _buildStyleList(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        const Divider(),
-      ],
-    );
-  }
 
   Widget _buildSettings(BuildContext context) {
     return Material(
@@ -173,11 +181,4 @@ class _MyAppState extends State<math_app> {
       ),
     );
   }
-
-
-
-
-
-
 }
-
