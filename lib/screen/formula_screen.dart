@@ -21,6 +21,7 @@ class Formula_screen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             '解の公式',
@@ -30,28 +31,29 @@ class Formula_screen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              '説明',
-                              style: TextStyle(
-                                color: Colors.black,
+                          Row(
+                            children: [
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  '説明',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                color: Colors.red,
                               ),
-                            ),
-                            color: Colors.red,
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            color: Colors.blue,
-                            child: Text('グラフ'),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                color: Colors.blue,
+                                child: Text('グラフ'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -73,6 +75,7 @@ class Formula_screen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             '判別式',
@@ -82,28 +85,29 @@ class Formula_screen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              '説明',
-                              style: TextStyle(
-                                color: Colors.black,
+                          Row(
+                            children: [
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  '説明',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                color: Colors.red,
                               ),
-                            ),
-                            color: Colors.red,
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            color: Colors.blue,
-                            child: Text('グラフ'),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                color: Colors.blue,
+                                child: Text('グラフ'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -130,6 +134,7 @@ class Formula_screen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             '平方完成',
@@ -139,28 +144,29 @@ class Formula_screen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              '説明',
-                              style: TextStyle(
-                                color: Colors.black,
+                          Row(
+                            children: [
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  '説明',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                color: Colors.red,
                               ),
-                            ),
-                            color: Colors.red,
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            color: Colors.blue,
-                            child: Text('グラフ'),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                color: Colors.blue,
+                                child: Text('グラフ'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -180,37 +186,39 @@ class Formula_screen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            '最大最小',
+                            '平行移動',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 30.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            child: Text(
-                              '説明',
-                              style: TextStyle(
-                                color: Colors.black,
+                          Row(
+                            children: [
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                child: Text(
+                                  '説明',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                color: Colors.red,
                               ),
-                            ),
-                            color: Colors.red,
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RaisedButton(
-                            onPressed: () {},
-                            padding: EdgeInsets.all(10.0),
-                            color: Colors.blue,
-                            child: Text('グラフ'),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              RaisedButton(
+                                onPressed: () {},
+                                padding: EdgeInsets.all(10.0),
+                                color: Colors.blue,
+                                child: Text('グラフ'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
