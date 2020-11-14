@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 
+void main() {
+  runApp(
+    MaterialApp(
+      home: Formula_screen(),
+    ),
+  );
+}
+
+// TODO: ページ遷移の実装
 class Formula_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
