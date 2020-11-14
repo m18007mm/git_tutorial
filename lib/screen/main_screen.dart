@@ -13,7 +13,9 @@ class Quizzler extends StatelessWidget {
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Container(),
+            child: Image(
+              image: AssetImage('images/figure.png'),
+            ),
           ),
         ),
       ),
