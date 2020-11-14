@@ -4,7 +4,7 @@ makeList(int a, int b, int c) {
   var list_x = [];
   var list_y = [];
   var list = [];
-  var data = [];
+  List<Point> data = [];
   double n = 0.1;
   for (int i = 0; i < 101; i++) {
     list_x.add(i * n - 5 - b / (2 * a));
