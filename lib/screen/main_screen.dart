@@ -1,3 +1,4 @@
+import 'package:benesse_project_demo/screen/weather_screen.dart';
 import 'package:flutter/material.dart';
 import 'formula_screen.dart';
 import 'setting_screen.dart';
@@ -25,100 +26,102 @@ class _MyAppState extends State<math_app> {
       home: Builder(
         builder: (context) {
           return Scaffold(
-            key: _scaffoldKey,
-            appBar: AppBar(
-              title: const Text('はたらくかんすう'),
-              centerTitle: true,
-            ),
-            endDrawer: Drawer(
-              child: ListView(
-                children: <Widget>[
-                  DrawerHeader(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        CircleAvatar(
-                          radius: 50.0,
-                          backgroundImage: AssetImage('images/figure.png'),
-                        ),
-                        Text(
-                          'Name',
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                      color: _primarySwatch,
-                    ),
-                  ),
-                  ListTile(
-                    title: Text('MyAccount'),
-                    contentPadding: EdgeInsets.all(10.0),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    title: Text('weather'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    title: Text('setting'),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Setting();
-                          },
-                        ),
-                      );
-                    },
-                  ),
-                ],
+              key: _scaffoldKey,
+              appBar: AppBar(
+                title: const Text('はたらくかんすう'),
+                centerTitle: true,
               ),
-            ),
-            body: GridView.count(
-              crossAxisCount: 2,
-               crossAxisSpacing: 8.0,
-               mainAxisSpacing: 8.0,
-               padding: EdgeInsets.only(top: 8.0,right: 8.0,left: 8.0),
-               children: List.generate(5, (index) {
+              endDrawer: Drawer(
+                child: ListView(
+                  children: <Widget>[
+                    DrawerHeader(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 50.0,
+                            backgroundImage: AssetImage('images/benesse.jpg'),
+                          ),
+                          Text(
+                            'NAME',
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        color: _primarySwatch,
+                      ),
+                    ),
+                    ListTile(
+                      title: Text('MyAccount'),
+                      contentPadding: EdgeInsets.all(10.0),
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    ListTile(
+                      title: Text('weather'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return LocationScreen();
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                    ListTile(
+                      title: Text('setting'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Setting();
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              body: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 8.0,
+                mainAxisSpacing: 8.0,
+                padding: EdgeInsets.only(top: 8.0, right: 8.0, left: 8.0),
+                children: List.generate(5, (index) {
                   return Container(
                     padding: const EdgeInsets.all(5.0),
                     alignment: Alignment.center,
-                    decoration:BoxDecoration(
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                      color:_primarySwatch,
+                      color: _primarySwatch,
                     ),
                     child: GridTile(
                       child: FlatButton(
                         padding: EdgeInsets.all(25.0),
-                        onPressed: (){
-                          
-                        },
+                        onPressed: () {},
                       ),
-                      footer:Center(
-                        child: Text(
-                          '$index 二次関数'
-                        ),
+                      footer: Center(
+                        child: Text('$index 二次関数'),
                       ),
                     ),
                   );
-                }),),
-            bottomNavigationBar: _buildSettings(context)
-          );
+                }),
+              ),
+              bottomNavigationBar: _buildSettings(context));
         },
       ),
     );
   }
-
 
   Widget _buildSettings(BuildContext context) {
     return Material(
