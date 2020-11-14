@@ -73,19 +73,7 @@ class _MyAppState extends State<math_app> {
                   ),
 
                   ListTile(
-                    title: Text('concept'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    title: Text('formula'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    title: Text('graph'),
+                    title: Text('weather'),
                     onTap: () {
                       Navigator.pop(context);
                     },
@@ -93,7 +81,11 @@ class _MyAppState extends State<math_app> {
                   ListTile(
                     title: Text('setting'),
                     onTap: () {
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => SecondRoute(),),
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Setting();
+                        },
+                      ),
                       );
                     },
                   ),
@@ -112,7 +104,6 @@ class _MyAppState extends State<math_app> {
 
 
   Widget _buildStyleList(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
