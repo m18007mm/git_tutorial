@@ -1,6 +1,8 @@
 // TODO: とにかく実装
+import 'package:benesse_project_demo/graph.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
+import 'package:benesse_project_demo/screen/graph_screen.dart';
 
 void main() {
   runApp(
@@ -32,7 +34,16 @@ class Concept_screen extends StatelessWidget {
                   ),
                 ),
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return MyHomePage();
+                        },
+                      ),
+                    );
+                  },
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     'グラフ',
