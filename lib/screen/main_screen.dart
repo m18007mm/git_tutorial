@@ -14,7 +14,7 @@ class _MyAppState extends State<math_app> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   var _primarySwatch = Colors.blue;
   var _isDark = false;
-  List<String> data = ['二次関数','最大最小','解の公式','Lorem','Lorem'];
+  List<String> data = ['二次関数','図形と軽量','データの分析','Lorem','Lorem'];
 
   @override
   Widget build(BuildContext context) {
