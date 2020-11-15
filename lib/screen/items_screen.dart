@@ -8,6 +8,7 @@ void main() {
   );
 }
 
+// TODO: UIを整える
 class ItemsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,26 @@ class ItemsPage extends StatelessWidget {
                   shape: const UnderlineInputBorder(),
                   color: Colors.white,
                   textColor: Colors.blue,
+                  onPressed: () {},
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 600.0,
+                height: 50.0,
+                child: FlatButton(
+                  child: const Text('解の公式'),
+                  shape: const UnderlineInputBorder(),
+                  color: Colors.white,
+                  onPressed: () {},
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 600.0,
+                height: 50.0,
+                child: FlatButton(
+                  child: const Text('判別式'),
+                  shape: const UnderlineInputBorder(),
+                  color: Colors.white,
                   onPressed: () {},
                 ),
               ),
