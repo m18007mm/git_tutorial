@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 
+void main() => runApp(Formula_screen());
+
 class Formula_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,6 +10,10 @@ class Formula_screen extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('二次関数　公式集'),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {},
+          ),
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -58,6 +64,7 @@ class Formula_screen extends StatelessWidget {
                         ],
                       ),
                       TeXView(
+                        renderingEngine: TeXViewRenderingEngine.katex(),
                         child: TeXViewDocument(
                           r"""<p> 
                           2次方程式\(ax^2 + bx + c = 0\)の解は
@@ -112,6 +119,7 @@ class Formula_screen extends StatelessWidget {
                         ],
                       ),
                       TeXView(
+                        renderingEngine: TeXViewRenderingEngine.katex(),
                         child: TeXViewDocument(
                           r"""<p> 
                           2次関数\(y = ax^2 + bx + c\)のグラフと\(x\)の位置関係と，
@@ -171,6 +179,7 @@ class Formula_screen extends StatelessWidget {
                         ],
                       ),
                       TeXView(
+                        renderingEngine: TeXViewRenderingEngine.katex(),
                         child: TeXViewDocument(
                           r"""<p> 
                           二次関数\(y = ax^2 + bx + c\)は平方完成すると次の形になる．
@@ -223,6 +232,7 @@ class Formula_screen extends StatelessWidget {
                         ],
                       ),
                       TeXView(
+                        renderingEngine: TeXViewRenderingEngine.katex(),
                         child: TeXViewDocument(
                           r"""<p> 
                           平方完成して，\(y = a(x - p)^2 + q\)の形にする．                          
