@@ -32,5 +32,11 @@ flutter:
   assets:
     - images/
 
+fonts:
+  - family: NotoSansJP
+    fonts:
+        - asset: assets/fonts/NotoSansJP-Bold.otf
+
+
 
 
