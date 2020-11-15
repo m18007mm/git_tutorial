@@ -53,6 +53,7 @@ class Formula_screen extends StatelessWidget {
                           Row(
                             children: [
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 child: Text(
@@ -61,12 +62,13 @@ class Formula_screen extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                 ),
-                                color: Colors.red,
+                                color: Colors.redAccent,
                               ),
                               SizedBox(
                                 width: 10.0,
                               ),
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 color: Colors.blue,
@@ -108,6 +110,7 @@ class Formula_screen extends StatelessWidget {
                           Row(
                             children: [
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 child: Text(
@@ -116,12 +119,13 @@ class Formula_screen extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                 ),
-                                color: Colors.red,
+                                color: Colors.redAccent,
                               ),
                               SizedBox(
                                 width: 10.0,
                               ),
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 color: Colors.blue,
@@ -168,6 +172,7 @@ class Formula_screen extends StatelessWidget {
                           Row(
                             children: [
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {
                                   Navigator.push(
                                     context,
@@ -185,12 +190,13 @@ class Formula_screen extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                 ),
-                                color: Colors.red,
+                                color: Colors.redAccent,
                               ),
                               SizedBox(
                                 width: 10.0,
                               ),
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {
                                   Navigator.push(
                                     context,
@@ -239,6 +245,7 @@ class Formula_screen extends StatelessWidget {
                           Row(
                             children: [
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 child: Text(
@@ -247,12 +254,13 @@ class Formula_screen extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                 ),
-                                color: Colors.red,
+                                color: Colors.redAccent,
                               ),
                               SizedBox(
                                 width: 10.0,
                               ),
                               RaisedButton(
+                                elevation: 10.0,
                                 onPressed: () {},
                                 padding: EdgeInsets.all(10.0),
                                 color: Colors.blue,
