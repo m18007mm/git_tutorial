@@ -30,7 +30,8 @@ class Items_screen extends StatelessWidget {
                 minWidth: 600.0,
                 height: 50.0,
                 padding: EdgeInsets.all(10.0),
-                child: FlatButton(
+                child: RaisedButton(
+                    elevation: 18.0,
                     child: const Text('公式集'),
                     shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
@@ -55,7 +56,8 @@ class Items_screen extends StatelessWidget {
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
-                child: FlatButton(
+                child: RaisedButton(
+                  elevation: 10.0,
                   child: const Text('解の公式'),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
@@ -70,7 +72,8 @@ class Items_screen extends StatelessWidget {
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
-                child: FlatButton(
+                child: RaisedButton(
+                  elevation: 10.0,
                   child: const Text('判別式'),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
@@ -84,7 +87,8 @@ class Items_screen extends StatelessWidget {
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
-                child: FlatButton(
+                child: RaisedButton(
+                  elevation: 10.0,
                   child: const Text('平方完成'),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
@@ -109,7 +113,8 @@ class Items_screen extends StatelessWidget {
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
-                child: FlatButton(
+                child: RaisedButton(
+                  elevation: 10.0,
                   child: const Text('最大最小'),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
