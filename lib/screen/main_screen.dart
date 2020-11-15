@@ -14,6 +14,7 @@ class _MyAppState extends State<math_app> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   var _primarySwatch = Colors.blue;
   var _isDark = false;
+  List<String> data = ['二次関数','最大最小','解の公式','Lorem','Lorem'];
 
   @override
   Widget build(BuildContext context) {
@@ -93,15 +94,27 @@ class _MyAppState extends State<math_app> {
                 ),
               ),
               body: GridView.count(
+
+
                 crossAxisCount: 2,
-                crossAxisSpacing: 8.0,
-                mainAxisSpacing: 8.0,
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
                 padding: EdgeInsets.only(top: 8.0, right: 8.0, left: 8.0),
                 children: List.generate(5, (index) {
                   return Container(
+
+
                     padding: const EdgeInsets.all(5.0),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black26,
+                          spreadRadius: 2.0,
+                          blurRadius: 8.0,
+                          offset: Offset(8.0, 8.0),
+                        ),
+                      ],
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
                       color: _primarySwatch,
                     ),
@@ -111,7 +124,8 @@ class _MyAppState extends State<math_app> {
                         onPressed: () {},
                       ),
                       footer: Center(
-                        child: Text('$index 二次関数'),
+                        child: Text(data[index],
+                        textAlign: TextAlign.center,),
                       ),
                     ),
                   );
