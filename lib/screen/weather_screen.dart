@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:benesse_project_demo/weather/weather.dart';
+import 'main_screen.dart';
 
 class LocationScreen extends StatefulWidget {
   LocationScreen({this.locationWeather});
@@ -10,23 +11,14 @@ class LocationScreen extends StatefulWidget {
   _LocationScreenState createState() => _LocationScreenState();
 }
 
-
-
-
 class _LocationScreenState extends State<LocationScreen> {
-
   @override
-
-
-
   WeatherModel weather = WeatherModel();
   int temperature;
   String weatherIcon;
   String cityName;
 
-
-
-    @override
+  @override
   void initState() {
     super.initState();
 
@@ -65,7 +57,6 @@ class _LocationScreenState extends State<LocationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-
               Padding(
                 padding: EdgeInsets.only(left: 25.0),
                 child: Row(
@@ -84,6 +75,22 @@ class _LocationScreenState extends State<LocationScreen> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Expanded(
+                child: FlatButton(
+                  child: const Text('Start',style: TextStyle(fontSize: 50.0,fontWeight: FontWeight.bold,color: Colors.white,),),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return math_app();
+                        },
+                      ),
+                    );
+                  },
+                  splashColor: Color(0x88ffffff),
                 ),
               ),
             ],
