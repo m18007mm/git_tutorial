@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
+import 'package:benesse_project_demo/screen/concept_screen.dart';
+import 'package:benesse_project_demo/screen/graph_screen.dart';
 
 
 void main() {
@@ -165,7 +167,16 @@ class Formula_screen extends StatelessWidget {
                           Row(
                             children: [
                               RaisedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Concept_screen();
+                                      },
+                                    ),
+                                  );
+                                },
                                 padding: EdgeInsets.all(10.0),
                                 child: Text(
                                   '説明',
@@ -179,7 +190,16 @@ class Formula_screen extends StatelessWidget {
                                 width: 10.0,
                               ),
                               RaisedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Graph_screen();
+                                      },
+                                    ),
+                                  );
+                                },
                                 padding: EdgeInsets.all(10.0),
                                 color: Colors.blue,
                                 child: Text('グラフ'),
