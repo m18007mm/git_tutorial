@@ -1,7 +1,9 @@
 import 'package:benesse_project_demo/screen/weather_screen.dart';
+import 'package:benesse_project_demo/screen/items_screen.dart';
 import 'package:flutter/material.dart';
 import 'formula_screen.dart';
 import 'setting_screen.dart';
+
 
 void main() => runApp(math_app());
 
@@ -122,7 +124,16 @@ class _MyAppState extends State<math_app> {
                       child: FlatButton(
                         child: Text(''),
                         padding: EdgeInsets.all(25.0),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Items_screen();
+                              },
+                            ),
+                          );
+                        },
                       ),
                       footer: Center(
                         child: Text(data[index],
