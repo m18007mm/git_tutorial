@@ -27,8 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
     List list = [];
     List<Point> data = [];
     double n = 0.1;
-    for (int i = 0; i < 100; i++) {
-      list_x.add(i * n - 5);
+    for (int i = 0; i < 101; i++) {
+      list_x.add(i * n - 5 - b1 / (2 * a1));
       list_y.add(a1 * pow(list_x[i], 2) + b1 * list_x[i] + c1);
       list.add([list_x[i], list_y[i]]);
       double x = list_x[i];
@@ -40,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final _formKey = GlobalKey<FormState>();
 
-  // フォーカス管理用のFocusNode
   final a_focus = FocusNode();
   final b_focus = FocusNode();
   final c_focus = FocusNode();
@@ -50,14 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
   var your_b = 1;
   var your_c = 1;
 
-  // 名前更新用メソッド
   void _updateA(int a) {
     setState(() {
       your_a = a;
     });
   }
 
-  // 年齢更新用メソッド
   void _updateB(int b) {
     setState(() {
       your_b = b;
@@ -83,11 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 new Container(
                   padding: const EdgeInsets.only(top: 12.0),
-                  child: new Text('Super Neat Plot'),
+                  child: new Text('二次関数グラフ'),
                 ),
                 new Container(
                   child: new Plot(
-                    height: 200.0,
+                    height: 300.0,
                     data: makeList(your_a, your_b, your_c),
                     gridSize: new Offset(2.0, 2.0),
                     style: new PlotStyle(
@@ -96,11 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       outlineRadius: 1.0,
                       primary: Colors.yellow,
                       secondary: Colors.red,
-                      trace: true,
-                      traceStokeWidth: 3.0,
-                      traceColor: Colors.blueGrey,
-                      traceClose: true,
-                      showCoordinates: true,
                       textStyle: new TextStyle(
                         fontSize: 8.0,
                         color: Colors.grey,
@@ -114,12 +106,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 new Container(
+                  child: Image.asset('images/function.png'),
+                ),
+                new Container(
                   child: Form(
                     key: _formKey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         TextFormField(
+                          decoration: InputDecoration(labelText: "aを入力"),
                           keyboardType: TextInputType.number,
                           // ここでは使用しないが、コントローラももちろん使用可能
                           // controller: _nameController,
@@ -149,6 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                         ),
                         TextFormField(
+                          decoration: InputDecoration(labelText: "bを入力"),
                           keyboardType: TextInputType.number,
                           // ここでは使用しないが、コントローラももちろん使用可能
                           // controller: _nameController,
@@ -178,6 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                         ),
                         TextFormField(
+                          decoration: InputDecoration(labelText: "cを入力"),
                           // キーボードタイプを指定。ここではnumberを指定しており、数字キーボードを表示
                           // 一覧はhttps://api.flutter.dev/flutter/services/TextInputType-class.html
                           keyboardType: TextInputType.number,
@@ -196,6 +194,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           child: RaisedButton(
+                            color: Colors.teal,
                             // 送信ボタンクリック時の処理
                             onPressed: () {
                               // バリデーションチェック
@@ -210,7 +209,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                 makeList(your_a, your_b, your_c);
                               });
                             },
-                            child: Text('送信する'),
+                            child: Text(
+                              'グラフを描く',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ],
