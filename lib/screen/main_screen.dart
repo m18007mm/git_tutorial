@@ -120,6 +120,7 @@ class _MyAppState extends State<math_app> {
                     ),
                     child: GridTile(
                       child: FlatButton(
+                        child: Text(''),
                         padding: EdgeInsets.all(25.0),
                         onPressed: () {},
                       ),
