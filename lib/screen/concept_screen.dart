@@ -71,11 +71,31 @@ class Concept_screen extends StatelessWidget {
               style: TeXViewStyle.fromCSS(
                   'padding: 30px; color: black; background: white;'),
             ),
-            Image(
-              image: AssetImage('images/concept_4.png'),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image(
+                image: AssetImage('images/concept_4.png'),
+              ),
             ),
-            Image(
-              image: AssetImage('images/concept_4.png'),
+            Text(
+              '平方完成のイメージ',
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image(
+                image: AssetImage('images/concept_6.png'),
+              ),
+            ),
+            Text(
+              '二次関数の係数を変えた時のイメージ',
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
