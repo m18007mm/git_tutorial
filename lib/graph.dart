@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 new Container(
                   padding: const EdgeInsets.only(top: 12.0),
-                  child: new Text('二次関数グラフ'),
+                  child: new Text('二次関数グラフ',style:TextStyle(fontSize: 40.0,fontWeight: FontWeight.bold,color: Colors.blue,),),
                 ),
                 new Container(
                   child: new Plot(
@@ -106,6 +106,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 new Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    color: Colors.blueAccent,
+                  ),
                   child: Image.asset('images/function.png'),
                 ),
                 new Container(
@@ -194,7 +198,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 16.0),
                           child: RaisedButton(
-                            color: Colors.teal,
+                            elevation: 10.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.lightBlue),
+                            ),
+                            color: Colors.blue,
                             // 送信ボタンクリック時の処理
                             onPressed: () {
                               // バリデーションチェック
