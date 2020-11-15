@@ -1,7 +1,8 @@
+import 'package:benesse_project_demo/graph.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 import 'package:benesse_project_demo/screen/concept_screen.dart';
-import 'package:benesse_project_demo/screen/graph_screen.dart';
+import 'package:benesse_project_demo/graph.dart';
 
 
 void main() {
@@ -195,7 +196,7 @@ class Formula_screen extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) {
-                                        return Graph_screen();
+                                        return MyHomePage();
                                       },
                                     ),
                                   );

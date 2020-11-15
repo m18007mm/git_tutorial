@@ -25,34 +25,37 @@ class Items_screen extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 10.0,),
+              SizedBox(
+                height: 10.0,
+              ),
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
                 padding: EdgeInsets.all(10.0),
                 child: RaisedButton(
-                    elevation: 18.0,
-                    child: const Text('公式集'),
-                    shape: RoundedRectangleBorder(
+                  elevation: 18.0,
+                  child: const Text('公式集'),
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.white),
+                    side: BorderSide(color: Colors.white),
+                  ),
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Formula_screen();
+                        },
+                      ),
+                    );
+                  },
+                ),
               ),
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    onPressed: () {
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return Formula_screen();
-                            },
-                          ),
-                        );
-                      };
-                    }),
+              SizedBox(
+                height: 50.0,
               ),
-              SizedBox(height: 50.0,),
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
@@ -64,11 +67,12 @@ class Items_screen extends StatelessWidget {
                     side: BorderSide(color: Colors.blue),
                   ),
                   color: Colors.white,
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                 ),
               ),
-              SizedBox(height: 50.0,),
+              SizedBox(
+                height: 50.0,
+              ),
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
@@ -83,7 +87,9 @@ class Items_screen extends StatelessWidget {
                   onPressed: () {},
                 ),
               ),
-              SizedBox(height: 50.0,),
+              SizedBox(
+                height: 50.0,
+              ),
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
@@ -96,20 +102,20 @@ class Items_screen extends StatelessWidget {
                   ),
                   color: Colors.white,
                   onPressed: () {
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Concept_screen();
-                          },
-                        ),
-                      );
-                    };
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Concept_screen();
+                        },
+                      ),
+                    );
                   },
                 ),
               ),
-              SizedBox(height: 50.0,),
+              SizedBox(
+                height: 50.0,
+              ),
               ButtonTheme(
                 minWidth: 600.0,
                 height: 50.0,
