@@ -85,6 +85,9 @@ class Concept_screen extends StatelessWidget {
             Image(
               image: AssetImage('images/concept_4.png'),
             ),
+            Image(
+              image: AssetImage('images/concept_4.png'),
+            ),
           ],
         ),
       ),
