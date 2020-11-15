@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tex/flutter_tex.dart';
 
 
-void main() => runApp(Formula_screen());
+void main() {
+  runApp(
+    MaterialApp(
+      home: Formula_screen(),
+    ),
+  );
+}
 
 
 // TODO: ページ遷移の実装
