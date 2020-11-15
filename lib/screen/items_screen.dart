@@ -1,4 +1,5 @@
 import 'package:benesse_project_demo/screen/concept_screen.dart';
+import 'package:benesse_project_demo/screen/formula_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +32,18 @@ class Items_screen extends StatelessWidget {
                     shape: const UnderlineInputBorder(),
                     color: Colors.white,
                     textColor: Colors.blue,
-                    onPressed: () {}),
+                    onPressed: () {
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Formula_screen();
+                            },
+                          ),
+                        );
+                      };
+                    }),
               ),
               ButtonTheme(
                 minWidth: 600.0,
@@ -41,14 +53,6 @@ class Items_screen extends StatelessWidget {
                   shape: const UnderlineInputBorder(),
                   color: Colors.white,
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return Concept_screen();
-                        },
-                      ),
-                    );
                   },
                 ),
               ),
@@ -69,7 +73,18 @@ class Items_screen extends StatelessWidget {
                   child: const Text('平方完成'),
                   shape: const UnderlineInputBorder(),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Concept_screen();
+                          },
+                        ),
+                      );
+                    };
+                  },
                 ),
               ),
               ButtonTheme(
